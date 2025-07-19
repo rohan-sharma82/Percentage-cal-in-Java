@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class Percentage_calculator {
+    public static void main(String[] args)
+    {
+        System.out.println("Calculating percentage - ");
+        Scanner input=new Scanner(System.in);
+        System.out.println("Total marks of each subject=");
+        int total=input.nextInt();
+        System.out.println("number of subjects");
+        int no= input.nextInt();
+        float tt=total*no;
+        System.out.println("Total marks according to number of subjects "+tt);
+
+        //System.out.println("enter 1st subject marks=");
+        //float first=input.nextInt();
+
+        //System.out.println("enter 2nd marks");
+        //float second=input.nextInt();
+
+        //System.out.println("3rd subject marks");
+        //float third=input.nextInt();
+        float totalmarks=0;
+        for(int i=1;i<=no;i++){
+            System.out.println("Enter marks of subject "+i+" : ");
+            float marks=input.nextFloat();
+            totalmarks+=marks;
+        }
+        System.out.println("Total marks you obtain= "+ totalmarks);
+
+        float percentage=(totalmarks/tt)*100;
+
+        System.out.println("Your final percentage is "+ String.format("%.2f",percentage)+"%");
+
+        //System.out.println(percentage);
+
+
+
+        if(percentage >= 90) System.out.println("Grade: A+");
+        else if(percentage >= 80) System.out.println("Grade: A");
+        else if(percentage >= 70) System.out.println("Grade: B");
+        else if(percentage >= 60) System.out.println("Grade: C");
+        else if(percentage >= 50) System.out.println("Grade: D");
+        else System.out.println("Grade: F");
+
+    }
+
+}
